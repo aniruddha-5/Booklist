@@ -6,9 +6,8 @@
 </head>
 <body>
 <div id="fb-root"></div>
-<script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v9.0&appId=693675404848684&autoLogAppEvents=1" nonce="cKfImLRP"></script>
-<div class="fb-login-button" data-width="" data-size="large" data-button-type="login_with" data-layout="rounded" data-auto-logout-link="true" data-use-continue-as="false"></div>
-<script >
+
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v9.0&appId=693675404848684&autoLogAppEvents=1" nonce="cKfImLRP">
 
   function statusChangeCallback(response) {  // Called with the results from FB.getLoginStatus().
     console.log('statusChangeCallback');
@@ -43,15 +42,7 @@
       statusChangeCallback(response);        // Returns the login status.
     });
   };
-  
 
-  function testAPI() {                      // Testing Graph API after login.  See statusChangeCallback() for when this call is made.
-    console.log('Welcome!  Fetching your information.... ');
-    FB.api('/me', function(response) {
-      console.log('Successful login for: ' + response.name);
-      document.getElementById('status').innerHTML =
-        'Thanks for logging in, ' + response.name + '!';
-    });
   } 
 
 
@@ -59,9 +50,7 @@
 
 
 <!-- The JS SDK Login Button -->
-
-<fb:login-button scope="public_profile,email" onlogin="checkLoginState();">
-</fb:login-button>
+<div class="fb-login-button" data-width="" data-size="large" data-button-type="login_with" data-layout="rounded" scope="public_profile,email" onlogin="checkLoginState();"></div>
 
 <div id="status">
 </div>
