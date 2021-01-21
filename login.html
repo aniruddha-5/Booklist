@@ -47,12 +47,15 @@
 
 
 <!-- The JS SDK Login Button -->
-<div style="display:block; margin-left: auto; margin-right: auto; width: 40%; padding: 70px 0;" class="fb-login-button" data-width="" data-size="large" data-button-type="login_with" data-layout="rounded" scope="public_profile,email" onlogin="checkLoginState();">
+<div style="display:block; margin-left: auto; margin-right: auto; width: 40%; padding: 70px 0;">
+<fb:login-button scope="public_profile,email" onlogin="checkLoginState();">
+</fb:login-button>
 </div>
 
-<div id="fb-root"></div>
+<div id="status">
+</div>
 
 <!-- Load the JS SDK asynchronously -->
-<script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v9.0&appId=693675404848684&autoLogAppEvents=1" nonce="z8RkISkf"></script>
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js"></script>
 </body>
 </html>
