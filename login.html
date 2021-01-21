@@ -14,8 +14,8 @@
     if (response.status === 'connected') {   // Logged into your webpage and Facebook.
       location.replace("https://aniruddha-5.github.io/Booklist/")  
     } else {                                 // Not logged into your webpage or we are unable to tell.
-      document.getElementById('status').innerHTML = 'Please log ' +
-        'into this webpage.';
+      document.getElementById('status').innerHTML = '' +
+        '';
     }
   }
 
@@ -47,7 +47,7 @@
 
 
 <!-- The JS SDK Login Button -->
-<div style="display:block; margin-left: auto; margin-right: auto; width: 50%;">
+<div style="display:block; margin-left: 450px; margin-top: 250px; width: 50%;">
 <fb:login-button scope="public_profile,email" onlogin="checkLoginState();">
 </fb:login-button>
 </div>
