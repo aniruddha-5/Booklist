@@ -1,20 +1,18 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Facebook Login JavaScript Example</title>
+<title>Facebook Login </title>
 <meta charset="UTF-8">
 </head>
 <body>
-<div id="fb-root"></div>
 
-<script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v9.0&appId=693675404848684&autoLogAppEvents=1" nonce="cKfImLRP">
+<script>
 
   function statusChangeCallback(response) {  // Called with the results from FB.getLoginStatus().
     console.log('statusChangeCallback');
     console.log(response);                   // The current login status of the person.
     if (response.status === 'connected') {   // Logged into your webpage and Facebook.
-      location.replace("https://aniruddha-5.github.io/Booklist/")
-      //testAPI();  
+      location.replace("https://aniruddha-5.github.io/Booklist/")  
     } else {                                 // Not logged into your webpage or we are unable to tell.
       document.getElementById('status').innerHTML = 'Please log ' +
         'into this webpage.';
@@ -43,19 +41,18 @@
     });
   };
 
-  } 
 
 
 </script>
 
 
 <!-- The JS SDK Login Button -->
-<div class="fb-login-button" data-width="" data-size="large" data-button-type="login_with" data-layout="rounded" scope="public_profile,email" onlogin="checkLoginState();"></div>
-
-<div id="status">
+<div style="display:block; margin-left: auto; margin-right: auto; width: 40%; padding: 70px 0;" class="fb-login-button" data-width="" data-size="large" data-button-type="login_with" data-layout="rounded" scope="public_profile,email" onlogin="checkLoginState();">
 </div>
 
+<div id="fb-root"></div>
+
 <!-- Load the JS SDK asynchronously -->
-<script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js"></script>
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v9.0&appId=693675404848684&autoLogAppEvents=1" nonce="z8RkISkf"></script>
 </body>
 </html>
